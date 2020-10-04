@@ -1,0 +1,1 @@
+### Thermostat to switch adapter
