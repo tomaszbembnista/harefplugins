@@ -43,7 +43,9 @@ public class Thermostat implements SignalProcessor {
     @Override
     public void setState(String stateStr) throws InvalidStateException {
         try {
-            state = gson.fromJson(stateStr, State.class);
+            if (stateStr != null) {
+                state = gson.fromJson(stateStr, State.class);
+            }
             operationsProcessor.state = state;
         } catch (Exception e) {
             throw new InvalidStateException("Wrong JSON syntax");

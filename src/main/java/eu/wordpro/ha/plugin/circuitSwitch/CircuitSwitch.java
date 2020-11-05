@@ -14,7 +14,7 @@ import java.util.List;
 public class CircuitSwitch implements SignalProcessor {
     private StateListener stateListener;
 
-    OperationsProcessor operationsProcessor;
+    OperationsProcessor operationsProcessor = new OperationsProcessor();
 
     @Override
     public void setConfiguration(String s) throws InvalidConfigurationException {

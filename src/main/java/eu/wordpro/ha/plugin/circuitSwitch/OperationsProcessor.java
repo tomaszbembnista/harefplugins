@@ -36,8 +36,6 @@ class OperationsProcessor {
     private ProcessorOperationDesc getOperationDesc(String name){
         ProcessorOperationDesc result = new ProcessorOperationDesc();
         result.setName(name);
-        ProcessorOperationArgumentDesc requiredTempArg = new ProcessorOperationArgumentDesc();
-        result.getArguments().add(requiredTempArg);
         result.setResult(DataType.VOID);
         return result;
     }
